@@ -1,0 +1,338 @@
+﻿@model FitnessCenterSystem.Models.Appointment
+
+@{
+    ViewData["Title"] = "Yeni Randevu Oluştur";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0"><i class="fas fa-calendar-plus me-2"></i>Yeni Randevu Oluştur</h4>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Create" method="post" id="appointmentForm">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <!-- Antrenör Seçimi -->
+                        <div class="mb-3">
+                            <label for="trainerId" class="form-label fw-bold">Antrenör Seçin:</label>
+                            <select id="trainerId" name="TrainerId" class="form-select" required>
+                                <option value="">-- Antrenör Seçin --</option>
+                                <!-- JavaScript ile doldurulacak -->
+                            </select>
+                            <span class="text-danger" id="trainerError"></span>
+                        </div>
+
+                        <!-- Tarih Seçimi -->
+                        <div class="mb-3">
+                            <label for="appointmentDate" class="form-label fw-bold">Randevu Tarihi:</label>
+                            <input type="date" id="appointmentDate" name="AppointmentDate" 
+                                   class="form-control" min="@DateTime.Now.ToString("yyyy-MM-dd")" 
+                                   max="@DateTime.Now.AddMonths(1).ToString("yyyy-MM-dd")" required>
+                            <span class="text-danger" id="dateError"></span>
+                        </div>
+
+                        <!-- Saat Seçimi -->
+                        <div class="mb-3">
+                            <label for="appointmentTime" class="form-label fw-bold">Randevu Saati:</label>
+                            <select id="appointmentTime" name="AppointmentTime" class="form-select" required disabled>
+                                <option value="">-- Önce tarih seçin --</option>
+                            </select>
+                            <span class="text-danger" id="timeError"></span>
+                            <small class="form-text text-muted">Müsait saatler seçilen tarihe göre gösterilecektir</small>
+                        </div>
+
+                        <!-- Hizmet Türü -->
+                        <div class="mb-3">
+                            <label for="serviceType" class="form-label fw-bold">Hizmet Türü:</label>
+                            <select id="serviceType" name="ServiceType" class="form-select" required>
+                                <option value="">-- Hizmet Seçin --</option>
+                                <option value="Fitness">Fitness</option>
+                                <option value="Yoga">Yoga</option>
+                                <option value="Pilates">Pilates</option>
+                                <option value="Kardiyo">Kardiyo</option>
+                                <option value="Zumba">Zumba</option>
+                                <option value="Spinning">Spinning</option>
+                            </select>
+                        </div>
+
+                        <!-- Süre -->
+                        <div class="mb-3">
+                            <label for="duration" class="form-label fw-bold">Süre (dakika):</label>
+                            <select id="duration" name="Duration" class="form-select">
+                                <option value="30">30 dakika</option>
+                                <option value="45">45 dakika</option>
+                                <option value="60" selected>60 dakika</option>
+                                <option value="90">90 dakika</option>
+                                <option value="120">120 dakika</option>
+                            </select>
+                        </div>
+
+                        <!-- Notlar -->
+                        <div class="mb-3">
+                            <label for="notes" class="form-label fw-bold">Özel Notlar (isteğe bağlı):</label>
+                            <textarea id="notes" name="Notes" class="form-control" rows="3" 
+                                      placeholder="Antrenör için özel istek veya notlarınız..."></textarea>
+                        </div>
+
+                        <!-- Bilgilendirme -->
+                        <div class="alert alert-info">
+                            <h6><i class="fas fa-info-circle me-2"></i>Randevu Bilgileri</h6>
+                            <ul class="mb-0">
+                                <li>Randevu onayı antrenör tarafından yapılacaktır</li>
+                                <li>Randevu saatinden 15 dakika önce salonda olunuz</li>
+                                <li>İptaller için en geç 24 saat önce bilgi veriniz</li>
+                            </ul>
+                        </div>
+
+                        <!-- Fiyat Hesaplama -->
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h6 class="card-title">Fiyat Bilgisi</h6>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p class="mb-1">Seans Ücreti:</p>
+                                        <p class="mb-1">Süre:</p>
+                                        <hr class="my-1">
+                                        <p class="fw-bold">Toplam:</p>
+                                    </div>
+                                    <div class="col-md-6 text-end">
+                                        <p class="mb-1" id="hourlyRate">0.00 ₺</p>
+                                        <p class="mb-1" id="selectedDuration">60 dakika</p>
+                                        <hr class="my-1">
+                                        <p class="fw-bold" id="totalPrice">0.00 ₺</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Butonlar -->
+                        <div class="d-flex justify-content-between mt-4">
+                            <a asp-action="Index" class="btn btn-secondary">
+                                <i class="fas fa-arrow-left me-1"></i>Geri Dön
+                            </a>
+                            <button type="submit" class="btn btn-success" id="submitBtn">
+                                <i class="fas fa-check me-1"></i>Randevu Oluştur
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            let trainers = [];
+            let hourlyRate = 0;
+
+            // 1. Antrenörleri API'den yükle
+            function loadTrainers() {
+                $.ajax({
+                    url: '/api/Api/trainers',
+                    method: 'GET',
+                    success: function(data) {
+                        trainers = data;
+                        const select = $('#trainerId');
+                        select.empty();
+                        select.append('<option value="">-- Antrenör Seçin --</option>');
+                        
+                        data.forEach(trainer => {
+                            select.append(
+                                `<option value="${trainer.id}" data-rate="${trainer.hourlyRate}">
+                                    ${trainer.firstName} ${trainer.lastName} - ${trainer.specialization} (${trainer.hourlyRate} ₺/saat)
+                                </option>`
+                            );
+                        });
+                    },
+                    error: function() {
+                        $('#trainerError').text('Antrenörler yüklenirken hata oluştu.');
+                    }
+                });
+            }
+
+            // 2. Antrenör seçildiğinde
+            $('#trainerId').change(function() {
+                const selectedTrainerId = $(this).val();
+                hourlyRate = $(this).find('option:selected').data('rate') || 0;
+                
+                $('#hourlyRate').text(hourlyRate.toFixed(2) + ' ₺');
+                calculateTotal();
+                
+                // Tarih seçilmişse müsait saatleri yükle
+                const selectedDate = $('#appointmentDate').val();
+                if (selectedDate && selectedTrainerId) {
+                    loadAvailableHours(selectedTrainerId, selectedDate);
+                }
+            });
+
+            // 3. Tarih değiştiğinde
+            $('#appointmentDate').change(function() {
+                const selectedDate = $(this).val();
+                const selectedTrainerId = $('#trainerId').val();
+                
+                if (!selectedDate) {
+                    $('#timeError').text('Lütfen önce bir tarih seçin.');
+                    $('#appointmentTime').prop('disabled', true);
+                    return;
+                }
+                
+                if (!selectedTrainerId) {
+                    $('#timeError').text('Lütfen önce bir antrenör seçin.');
+                    return;
+                }
+                
+                loadAvailableHours(selectedTrainerId, selectedDate);
+            });
+
+            // 4. Müsait saatleri yükle
+            function loadAvailableHours(trainerId, date) {
+                $('#appointmentTime').prop('disabled', true);
+                $('#appointmentTime').html('<option value="">Yükleniyor...</option>');
+                
+                $.ajax({
+                    url: `/api/Api/availabletrainers?date=${date}`,
+                    method: 'GET',
+                    success: function(data) {
+                        const select = $('#appointmentTime');
+                        select.empty();
+                        
+                        // Seçilen antrenörün müsait olup olmadığını kontrol et
+                        const isAvailable = data.some(trainer => trainer.id == trainerId);
+                        
+                        if (!isAvailable) {
+                            select.append('<option value="">Bu tarihte müsait değil</option>');
+                            $('#timeError').text('Seçilen antrenör bu tarihte müsait değil.');
+                        } else {
+                            // Standart saatler (gerçek uygulamada API'den gelmeli)
+                            const availableHours = [
+                                '09:00', '10:00', '11:00', '13:00', 
+                                '14:00', '15:00', '16:00', '17:00', '18:00'
+                            ];
+                            
+                            select.append('<option value="">-- Saat Seçin --</option>');
+                            availableHours.forEach(hour => {
+                                select.append(`<option value="${hour}">${hour}</option>`);
+                            });
+                            
+                            $('#timeError').text('');
+                            select.prop('disabled', false);
+                        }
+                    },
+                    error: function() {
+                        $('#appointmentTime').html('<option value="">Hata oluştu</option>');
+                        $('#timeError').text('Müsait saatler yüklenirken hata oluştu.');
+                    }
+                });
+            }
+
+            // 5. Süre değiştiğinde
+            $('#duration').change(function() {
+                const duration = $(this).val();
+                $('#selectedDuration').text(duration + ' dakika');
+                calculateTotal();
+            });
+
+            // 6. Toplam fiyat hesapla
+            function calculateTotal() {
+                const duration = $('#duration').val();
+                const hours = duration / 60;
+                const total = hourlyRate * hours;
+                
+                $('#totalPrice').text(total.toFixed(2) + ' ₺');
+            }
+
+            // 7. Form gönderimi
+            $('#appointmentForm').submit(function(e) {
+                e.preventDefault();
+                
+                // Form verilerini topla
+                const formData = {
+                    TrainerId: $('#trainerId').val(),
+                    AppointmentDate: $('#appointmentDate').val() + 'T' + $('#appointmentTime').val(),
+                    ServiceType: $('#serviceType').val(),
+                    Duration: $('#duration').val(),
+                    Notes: $('#notes').val(),
+                    Price: parseFloat($('#totalPrice').text())
+                };
+
+                // Validasyon
+                if (!formData.TrainerId) {
+                    alert('Lütfen bir antrenör seçin.');
+                    return;
+                }
+                
+                if (!formData.AppointmentDate.includes('T')) {
+                    alert('Lütfen bir saat seçin.');
+                    return;
+                }
+
+                // AJAX ile gönder
+                $.ajax({
+                    url: '/Appointment/Create',
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(formData),
+                    success: function(response) {
+                        if (response.success) {
+                            alert('Randevunuz başarıyla oluşturuldu! Onay bekleniyor.');
+                            window.location.href = '/Appointment';
+                        } else {
+                            alert('Randevu oluşturulamadı: ' + response.message);
+                        }
+                    },
+                    error: function(xhr) {
+                        alert('Bir hata oluştu: ' + xhr.responseText);
+                    }
+                });
+            });
+
+            // Sayfa yüklendiğinde antrenörleri getir
+            loadTrainers();
+            
+            // Bugünün tarihini varsayılan yap
+            const today = new Date().toISOString().split('T')[0];
+            $('#appointmentDate').val(today);
+        });
+    </script>
+
+    <style>
+        .card {
+            border-radius: 15px;
+            border: none;
+        }
+        .card-header {
+            border-radius: 15px 15px 0 0 !important;
+        }
+        .form-control, .form-select {
+            border-radius: 10px;
+            border: 1px solid #ced4da;
+            padding: 10px 15px;
+        }
+        .form-control:focus, .form-select:focus {
+            border-color: #0d6efd;
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+        }
+        .btn {
+            border-radius: 10px;
+            padding: 10px 25px;
+            font-weight: 500;
+        }
+        .alert {
+            border-radius: 10px;
+            border: none;
+        }
+        label {
+            color: #495057;
+        }
+        #totalPrice {
+            color: #198754;
+            font-size: 1.2rem;
+        }
+    </style>
+}
