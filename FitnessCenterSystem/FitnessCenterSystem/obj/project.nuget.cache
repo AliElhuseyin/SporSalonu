@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9l9DS2ORLXcQGZ1hj0NI0gNv5m7m1HqHyL/bunX72m7t3Ma1yow4HhfEgl2dESWHoAo3snx9vg3CG85gjjofdg==",
+  "dgSpecHash": "/bw+rrhhY/ntp6+aiKBk56tBsi+DGHfU7kfANAVjQ1NQrq34a7laRea/IRFo5nOCGSWeMGU8YLi8Us7p3H1QvA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ALİ\\Source\\Repos\\FitnessCenterSystem\\FitnessCenterSystem\\FitnessCenterSystem.csproj",
+  "projectFilePath": "C:\\Users\\ALİ\\Documents\\GitHub\\SporSalonu\\FitnessCenterSystem\\FitnessCenterSystem\\FitnessCenterSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ALİ\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\ALİ\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

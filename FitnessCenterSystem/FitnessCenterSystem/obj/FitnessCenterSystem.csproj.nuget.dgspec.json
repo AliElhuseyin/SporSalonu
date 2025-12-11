@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ALİ\\Source\\Repos\\FitnessCenterSystem\\FitnessCenterSystem\\FitnessCenterSystem.csproj": {}
+    "C:\\Users\\ALİ\\Documents\\GitHub\\SporSalonu\\FitnessCenterSystem\\FitnessCenterSystem\\FitnessCenterSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ALİ\\Source\\Repos\\FitnessCenterSystem\\FitnessCenterSystem\\FitnessCenterSystem.csproj": {
+    "C:\\Users\\ALİ\\Documents\\GitHub\\SporSalonu\\FitnessCenterSystem\\FitnessCenterSystem\\FitnessCenterSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ALİ\\Source\\Repos\\FitnessCenterSystem\\FitnessCenterSystem\\FitnessCenterSystem.csproj",
+        "projectUniqueName": "C:\\Users\\ALİ\\Documents\\GitHub\\SporSalonu\\FitnessCenterSystem\\FitnessCenterSystem\\FitnessCenterSystem.csproj",
         "projectName": "FitnessCenterSystem",
-        "projectPath": "C:\\Users\\ALİ\\Source\\Repos\\FitnessCenterSystem\\FitnessCenterSystem\\FitnessCenterSystem.csproj",
+        "projectPath": "C:\\Users\\ALİ\\Documents\\GitHub\\SporSalonu\\FitnessCenterSystem\\FitnessCenterSystem\\FitnessCenterSystem.csproj",
         "packagesPath": "C:\\Users\\ALİ\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ALİ\\Source\\Repos\\FitnessCenterSystem\\FitnessCenterSystem\\obj\\",
+        "outputPath": "C:\\Users\\ALİ\\Documents\\GitHub\\SporSalonu\\FitnessCenterSystem\\FitnessCenterSystem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
