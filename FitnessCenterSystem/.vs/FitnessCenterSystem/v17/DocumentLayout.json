@@ -11,16 +11,16 @@
       "RelativeMoniker": "D:0:0:{AE9E4EAB-E89F-4FBE-8089-0044D54C42AA}|FitnessCenterSystem\\FitnessCenterSystem.csproj|solutionrelative:fitnesscentersystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{AE9E4EAB-E89F-4FBE-8089-0044D54C42AA}|FitnessCenterSystem\\FitnessCenterSystem.csproj|c:\\users\\al\u0130\\documents\\github\\sporsalonu\\fitnesscentersystem\\fitnesscentersystem\\views\\appointment\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AE9E4EAB-E89F-4FBE-8089-0044D54C42AA}|FitnessCenterSystem\\FitnessCenterSystem.csproj|solutionrelative:fitnesscentersystem\\views\\appointment\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AE9E4EAB-E89F-4FBE-8089-0044D54C42AA}|FitnessCenterSystem\\FitnessCenterSystem.csproj|c:\\users\\al\u0130\\documents\\github\\sporsalonu\\fitnesscentersystem\\fitnesscentersystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE9E4EAB-E89F-4FBE-8089-0044D54C42AA}|FitnessCenterSystem\\FitnessCenterSystem.csproj|solutionrelative:fitnesscentersystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AE9E4EAB-E89F-4FBE-8089-0044D54C42AA}|FitnessCenterSystem\\FitnessCenterSystem.csproj|c:\\users\\al\u0130\\documents\\github\\sporsalonu\\fitnesscentersystem\\fitnesscentersystem\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE9E4EAB-E89F-4FBE-8089-0044D54C42AA}|FitnessCenterSystem\\FitnessCenterSystem.csproj|solutionrelative:fitnesscentersystem\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE9E4EAB-E89F-4FBE-8089-0044D54C42AA}|FitnessCenterSystem\\FitnessCenterSystem.csproj|c:\\users\\al\u0130\\documents\\github\\sporsalonu\\fitnesscentersystem\\fitnesscentersystem\\views\\appointment\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AE9E4EAB-E89F-4FBE-8089-0044D54C42AA}|FitnessCenterSystem\\FitnessCenterSystem.csproj|solutionrelative:fitnesscentersystem\\views\\appointment\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AE9E4EAB-E89F-4FBE-8089-0044D54C42AA}|FitnessCenterSystem\\FitnessCenterSystem.csproj|c:\\users\\al\u0130\\documents\\github\\sporsalonu\\fitnesscentersystem\\fitnesscentersystem\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -100,22 +100,23 @@
               "RelativeDocumentMoniker": "FitnessCenterSystem\\Migrations\\20251209124142_InitialCreate.cs",
               "ToolTip": "C:\\Users\\AL\u0130\\Documents\\GitHub\\SporSalonu\\FitnessCenterSystem\\FitnessCenterSystem\\Migrations\\20251209124142_InitialCreate.cs",
               "RelativeToolTip": "FitnessCenterSystem\\Migrations\\20251209124142_InitialCreate.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-09T12:41:42.829Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\AL\u0130\\Documents\\GitHub\\SporSalonu\\FitnessCenterSystem\\FitnessCenterSystem\\Views\\Appointment\\Create.cshtml",
               "RelativeDocumentMoniker": "FitnessCenterSystem\\Views\\Appointment\\Create.cshtml",
               "ToolTip": "C:\\Users\\AL\u0130\\Documents\\GitHub\\SporSalonu\\FitnessCenterSystem\\FitnessCenterSystem\\Views\\Appointment\\Create.cshtml",
               "RelativeToolTip": "FitnessCenterSystem\\Views\\Appointment\\Create.cshtml",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAABYAAAA3AAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABYAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-09T12:19:34.271Z"
+              "WhenOpened": "2025-12-09T12:19:34.271Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -125,13 +126,14 @@
               "RelativeDocumentMoniker": "FitnessCenterSystem\\appsettings.json",
               "ToolTip": "C:\\Users\\AL\u0130\\Documents\\GitHub\\SporSalonu\\FitnessCenterSystem\\FitnessCenterSystem\\appsettings.json",
               "RelativeToolTip": "FitnessCenterSystem\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-09T12:10:03.978Z"
+              "WhenOpened": "2025-12-09T12:10:03.978Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\AL\u0130\\Documents\\GitHub\\SporSalonu\\FitnessCenterSystem\\FitnessCenterSystem\\Program.cs",
               "RelativeDocumentMoniker": "FitnessCenterSystem\\Program.cs",
@@ -311,7 +313,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "AdminController.cs",
               "DocumentMoniker": "C:\\Users\\AL\u0130\\Documents\\GitHub\\SporSalonu\\FitnessCenterSystem\\FitnessCenterSystem\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "FitnessCenterSystem\\Controllers\\AdminController.cs",
