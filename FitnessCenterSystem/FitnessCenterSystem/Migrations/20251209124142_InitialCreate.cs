@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
-//ali//
+
 namespace FitnessCenterSystem.Migrations
 {
     /// <inheritdoc />
