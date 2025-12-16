@@ -100,7 +100,7 @@
               "RelativeDocumentMoniker": "FitnessCenterSystem\\Migrations\\20251209124142_InitialCreate.cs",
               "ToolTip": "C:\\Users\\AL\u0130\\Documents\\GitHub\\SporSalonu\\FitnessCenterSystem\\FitnessCenterSystem\\Migrations\\20251209124142_InitialCreate.cs",
               "RelativeToolTip": "FitnessCenterSystem\\Migrations\\20251209124142_InitialCreate.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-09T12:41:42.829Z",
               "EditorCaption": ""
@@ -115,7 +115,8 @@
               "RelativeToolTip": "FitnessCenterSystem\\Views\\Appointment\\Create.cshtml",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAABYAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-09T12:19:34.271Z"
+              "WhenOpened": "2025-12-09T12:19:34.271Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -127,7 +128,8 @@
               "RelativeToolTip": "FitnessCenterSystem\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-09T12:10:03.978Z"
+              "WhenOpened": "2025-12-09T12:10:03.978Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
