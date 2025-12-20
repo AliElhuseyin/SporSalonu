@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\AL\u0130\\Documents\\GitHub\\SporSalonu\\FitnessCenterSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AE9E4EAB-E89F-4FBE-8089-0044D54C42AA}|FitnessCenterSystem\\FitnessCenterSystem.csproj|c:\\users\\al\u0130\\documents\\github\\sporsalonu\\fitnesscentersystem\\fitnesscentersystem\\models\\gym.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE9E4EAB-E89F-4FBE-8089-0044D54C42AA}|FitnessCenterSystem\\FitnessCenterSystem.csproj|solutionrelative:fitnesscentersystem\\models\\gym.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AE9E4EAB-E89F-4FBE-8089-0044D54C42AA}|FitnessCenterSystem\\FitnessCenterSystem.csproj|c:\\users\\al\u0130\\documents\\github\\sporsalonu\\fitnesscentersystem\\fitnesscentersystem\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE9E4EAB-E89F-4FBE-8089-0044D54C42AA}|FitnessCenterSystem\\FitnessCenterSystem.csproj|solutionrelative:fitnesscentersystem\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AE9E4EAB-E89F-4FBE-8089-0044D54C42AA}|FitnessCenterSystem\\FitnessCenterSystem.csproj|c:\\users\\al\u0130\\documents\\github\\sporsalonu\\fitnesscentersystem\\fitnesscentersystem\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE9E4EAB-E89F-4FBE-8089-0044D54C42AA}|FitnessCenterSystem\\FitnessCenterSystem.csproj|solutionrelative:fitnesscentersystem\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE9E4EAB-E89F-4FBE-8089-0044D54C42AA}|FitnessCenterSystem\\FitnessCenterSystem.csproj|c:\\users\\al\u0130\\documents\\github\\sporsalonu\\fitnesscentersystem\\fitnesscentersystem\\models\\gym.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE9E4EAB-E89F-4FBE-8089-0044D54C42AA}|FitnessCenterSystem\\FitnessCenterSystem.csproj|solutionrelative:fitnesscentersystem\\models\\gym.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AE9E4EAB-E89F-4FBE-8089-0044D54C42AA}|FitnessCenterSystem\\FitnessCenterSystem.csproj|c:\\users\\al\u0130\\documents\\github\\sporsalonu\\fitnesscentersystem\\fitnesscentersystem\\controllers\\aicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,24 +26,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Gym.cs",
               "DocumentMoniker": "C:\\Users\\AL\u0130\\Documents\\GitHub\\SporSalonu\\FitnessCenterSystem\\FitnessCenterSystem\\Models\\Gym.cs",
               "RelativeDocumentMoniker": "FitnessCenterSystem\\Models\\Gym.cs",
               "ToolTip": "C:\\Users\\AL\u0130\\Documents\\GitHub\\SporSalonu\\FitnessCenterSystem\\FitnessCenterSystem\\Models\\Gym.cs",
               "RelativeToolTip": "FitnessCenterSystem\\Models\\Gym.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-18T20:27:43.685Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "AdminController.cs",
               "DocumentMoniker": "C:\\Users\\AL\u0130\\Documents\\GitHub\\SporSalonu\\FitnessCenterSystem\\FitnessCenterSystem\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "FitnessCenterSystem\\Controllers\\AdminController.cs",
@@ -64,12 +64,11 @@
               "RelativeToolTip": "FitnessCenterSystem\\Controllers\\AiController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T20:27:27.359Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-18T20:27:27.359Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\AL\u0130\\Documents\\GitHub\\SporSalonu\\FitnessCenterSystem\\FitnessCenterSystem\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "FitnessCenterSystem\\Controllers\\AccountController.cs",
